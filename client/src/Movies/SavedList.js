@@ -11,6 +11,7 @@ const SavedList = props => {
         <span className="saved-movie">{movie.title}</span>
       ))}
       <div onClick={history.goBack} className="home-button">
+        {/* link and push could also work here*/}
         Home
       </div>
     </div>

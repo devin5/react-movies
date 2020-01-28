@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Movie = props => {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState(null);
   let { id } = useParams();
 
   useEffect(() => {
@@ -49,7 +49,9 @@ const Movie = props => {
           </div>
         ))}
       </div>
-      <div className="save-button">Save</div>
+      <div onClick={() => props.add(movie)} className="save-button">
+        Save
+      </div>
     </div>
   );
 };
